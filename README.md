@@ -58,4 +58,4 @@ Si quieres contribuir al crecimiento de Somnus, puedes hacerlo de las siguientes
 - Traduciendo la aplicación a otros idiomas, puedes ver las instrucciones en el archivo [CONTRIBUTING.md]()
 
 ## Licencia
-La aplicación esta bajo la licencia [MIT]().
+This project is licensed under the GNU General Public License v3.0.
