@@ -7,12 +7,6 @@ def main(page: ft.Page):
     page.window.height = 800
     page.theme_mode = ft.ThemeMode.DARK
     page.dark_theme = ft.Theme(color_scheme_seed="green")
-    page.fonts = {
-        "Lettera" : "fonts/LetteraMonoLLCondLight-Regular.otf",
-        "Pixel" : "fonts/Ndot-55.otf",
-        "NTypeRegular" : "fonts/NType82-Regular.otf",
-        "NTypeMono" : "fonts/NType82Mono-Regular.otf",
-    }
 
     
 
@@ -24,16 +18,16 @@ def main(page: ft.Page):
                 ft.Container(
                     padding=16,
                     alignment=ft.alignment.center,
-                    content=ft.Text(value="SOMNUS", size=32, color=ft.colors.WHITE, font_family="Pixel")
+                    content=ft.Text(value="SOMNUS", size=32, color=ft.colors.WHITE)
                 ),
                 ft.Container(
                     padding=30,
                     alignment=ft.alignment.center,
-                    content=ft.Text(value='"Never waste any time you can spend sleeping." — Frank H. Knight', size=16, color=ft.colors.WHITE, font_family="Lettera")
+                    content=ft.Text(value='"Never waste any time you can spend sleeping." — Frank H. Knight', size=16, color=ft.colors.WHITE)
                 ),
                 ft.ListTile(
                     leading=ft.Icon(ft.cupertino_icons.PERSON_ADD, color=ft.colors.WHITE),
-                    title=ft.Text("Quick start", color=ft.colors.WHITE, size=20, font_family="Lettera"),
+                    title=ft.Text("Quick start", color=ft.colors.WHITE, size=20),
                     on_click=lambda _: page.go("/create_config")
                 )
             ]
@@ -54,17 +48,17 @@ def main(page: ft.Page):
 
         #TODO: Enhance the UI with a better layout, more screens and RangeSlider for the duration
 
-        name = ft.TextField(prefix_icon=ft.icons.DRIVE_FILE_RENAME_OUTLINE_OUTLINED, text_style=ft.TextStyle(color=ft.colors.WHITE, font_family="Lettera"), hint_text="Your name")
-        wake_up_hour = ft.TextField(prefix_icon=ft.icons.SUNNY_SNOWING, text_style=ft.TextStyle(color=ft.colors.WHITE, font_family="Lettera"), hint_text="Wake up hour")
-        duration = ft.TextField(prefix_icon=ft.icons.ACCESS_TIME_OUTLINED, text_style=ft.TextStyle(color=ft.colors.WHITE, font_family="Lettera"), hint_text="Sleep hours")
+        name = ft.TextField(prefix_icon=ft.icons.DRIVE_FILE_RENAME_OUTLINE_OUTLINED, text_style=ft.TextStyle(color=ft.colors.WHITE), hint_text="Your name")
+        wake_up_hour = ft.TextField(prefix_icon=ft.icons.SUNNY_SNOWING, text_style=ft.TextStyle(color=ft.colors.WHITE), hint_text="Wake up hour")
+        duration = ft.TextField(prefix_icon=ft.icons.ACCESS_TIME_OUTLINED, text_style=ft.TextStyle(color=ft.colors.WHITE), hint_text="Sleep hours")
         title = ft.Container(
                     padding=16,
                     alignment=ft.alignment.center,
-                    content=ft.Text(value="SOMNUS", size=32, color=ft.colors.WHITE, font_family="Pixel")
+                    content=ft.Text(value="SOMNUS", size=32, color=ft.colors.WHITE)
                 )
         submit = ft.ListTile(
                     leading=ft.Icon(ft.icons.SAVE, color=ft.colors.WHITE),
-                    title=ft.Text(value="Guardar", font_family="Lettera", size=20),
+                    title=ft.Text(value="Guardar", size=20),
                     on_click=save_config
                 )
 
@@ -99,7 +93,7 @@ def main(page: ft.Page):
                 ft.Container(
                     padding=6,
                     alignment=ft.alignment.center,
-                    content=ft.Text(value="SOMNUS", size=32, color=ft.colors.WHITE, font_family="Pixel"),
+                    content=ft.Text(value="SOMNUS", size=32, color=ft.colors.WHITE),
                 ),
                 ft.Container(
                     ft.Container(
@@ -109,35 +103,35 @@ def main(page: ft.Page):
                             top=ft.border.BorderSide(1, ft.colors.WHITE),
                             bottom=ft.border.BorderSide(1, ft.colors.WHITE)
                         ),
-                        content=ft.Text(value="HOME", size=25, color=ft.colors.WHITE, font_family="NTypeMono")
+                        content=ft.Text(value="HOME", size=25, color=ft.colors.WHITE)
                     ),
                     padding=10,
                     alignment=ft.alignment.center
                 ),
-                ft.Container(padding=10, content=ft.Text(value=welcome_text, size=16, color=ft.colors.WHITE, font_family="Lettera")),
+                ft.Container(padding=10, content=ft.Text(value=welcome_text, size=16, color=ft.colors.WHITE)),
                 ft.ListTile(
                     leading=ft.Icon(ft.icons.BED_OUTLINED, color=ft.colors.WHITE),
-                    title=ft.Text("Register sleep", color=ft.colors.WHITE, size=18, font_family="Lettera"),
+                    title=ft.Text("Register sleep", color=ft.colors.WHITE, size=18),
                     on_click=register_sleep
                 ),
                 ft.ListTile(
                     leading=ft.Icon(ft.icons.AUTO_GRAPH_OUTLINED, color=ft.colors.WHITE),
-                    title=ft.Text("Sleep debt", color=ft.colors.WHITE, size=18, font_family="Lettera"),
+                    title=ft.Text("Sleep debt", color=ft.colors.WHITE, size=18),
                     on_click=debt
                 ),
                 ft.ListTile(
                     leading=ft.Icon(ft.icons.CALENDAR_MONTH_OUTLINED, color=ft.colors.WHITE),
-                    title=ft.Text("Sleep Plan", color=ft.colors.WHITE, size=18, font_family="Lettera"),
+                    title=ft.Text("Sleep Plan", color=ft.colors.WHITE, size=18),
                     on_click=schedule
                 ),
                 ft.ListTile(
                     leading=ft.Icon(ft.icons.REPEAT_OUTLINED, color=ft.colors.WHITE),
-                    title=ft.Text("Circadian Routines", color=ft.colors.WHITE, size=18, font_family="Lettera"),
+                    title=ft.Text("Circadian Routines", color=ft.colors.WHITE, size=18),
                     on_click=routines
                 ),
                 ft.ListTile(
                     leading=ft.Icon(ft.icons.NOTIFICATIONS_ACTIVE_OUTLINED, color=ft.colors.WHITE),
-                    title=ft.Text("Reminders", color=ft.colors.WHITE, size=18, font_family="Lettera"),
+                    title=ft.Text("Reminders", color=ft.colors.WHITE, size=18),
                     on_click=reminders
                 )
             ]
