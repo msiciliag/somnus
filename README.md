@@ -15,6 +15,8 @@
 
 **Destinado a aquellos que buscan mejorar su calidad de vida a través de un sueño reparador.**
 
+Todos los datos se almacenan localmente en tu dispositivo para tener un mayor control sobre la privacidad.
+
 ## Instalación
 Descarga el apk desde la [última versión]() y sigue las instrucciones dentro de la aplicación.
 
