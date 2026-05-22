@@ -1,0 +1,4 @@
+{
+  "setup": ["cd flutter_app && flutter pub get"],
+  "run": ["./.superset/run.sh"]
+}
